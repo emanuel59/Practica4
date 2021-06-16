@@ -1,0 +1,20 @@
+@model Practica4.Models.Fail
+<form asp-action="Foto">
+  <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+  <div class="form-group">
+    <label asp-for="Nombre" class="control-label">Nombre de la imagen</label><br/>
+    <input asp-for="Nombre" class="form-control"/><br/>
+    <span asp-validation-for="Nombre" class="text-danger"></span>
+  </div>
+  
+  <div class="form-group">
+    <label asp-for="Foto" class="control-label">Imagen</label><br/>
+    <input asp-for="Foto" class="form-control"/>
+    <br/>
+  </div>
+  <input type="submit" value="Grabar" class="btn btn-primary" />
+</form>
+<h1> 
+   <!--@Html.DisplayNameFor(model => model.Mensajes)-->
+    @Html.DisplayFor(model => model.Mensajes)
+</h1>
